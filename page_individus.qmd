@@ -1,0 +1,83 @@
+---
+title: "Arbre Généalogique"
+author: Sarah Le Berre
+editor: visual
+format: 
+  html:
+    theme: minty
+    toc: true
+    toc-title: Sommaire
+    number-sections: false
+    echo: false
+    embed-resources: true
+    self-contained-math: true
+  pdf:
+    echo: false
+knitr:
+  opts_chunk:
+    out.width: "100%"
+---
+
+```{r}
+#| warning: false
+
+library(tidyverse)
+library(data.table)
+theme_set(theme_bw())
+
+
+dat <- fread("Genealogie.csv")
+
+#dat = dat %>% 
+#  mutate(Sosa = as.numeric(Sosa)) %>% 
+#  mutate_if(is.character, list(~na_if(.,""))) %>% 
+#  mutate(across(.fns = ~ replace_na(as.character(.x), "*Inconnu*")),
+#         Sosa = as.numeric(Sosa))
+```
+
+```{r}
+#| echo: false
+#| results: 'asis'
+
+cat("\n\n")
+
+for (l in unique(dat$Line)){
+  dd.l = dat %>% filter(Line == l)  
+  cat("\n\n#", l, "\n")
+
+  for (i in 1:nrow(dd.l)){
+    dd = dd.l[i, ]  
+    
+    if (dd$Other_names == "" | is.na(dd$Other_names)){
+      title = paste(dd$Sosa, ".", dd$Name, dd$Surname, sep = " ")
+    } else {
+      title = paste(dd$Sosa, ".", dd$Name, "(", dd$Other_names, ")", dd$Surname, sep = " ")
+    }
+    cat(sprintf("\n\n## %s {#%d}\n\n", title, dd$Sosa))
+
+    cat("\n**Naissance** le", dd$Birth_date, "à", dd$Birth_place, "\n")
+    father.id = dd$Sosa * 2
+    mother.id = father.id + 1
+    parents = paste(father.id, ".", dat[dat$Sosa == father.id, "Name"][[1]],
+        dat[dat$Sosa == father.id, "Surname"][[1]],
+        "&", dat[dat$Sosa == mother.id, "Name"][[1]], 
+        dat[dat$Sosa == mother.id, "Surname"][[1]], sep = " ")
+
+    # # Simple option with link but does not work with \t tabulator
+    # cat(sprintf("\nParents %s [jump](#%d)\n\n", parents, 2*dd$Sosa))
+    # Complicated HTML version
+    cat(sprintf(
+  "<div style='margin-left:2em;margin-bottom:2em;'><a href='#%d'><strong>Parents</strong></a> %s</div>\n\n",
+  2*dd$Sosa,
+  parents
+))
+    cat("\n**Mariage** le", dd$Wedding_date, "à", dd$Wedding_place, "\n")
+    cat("\n**Décès** le", dd$Death_date, "à", dd$Death_place, "\n")
+    
+
+  }
+}
+cat("\n\n")
+
+
+```

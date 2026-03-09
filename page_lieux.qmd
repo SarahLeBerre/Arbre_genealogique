@@ -1,0 +1,37 @@
+---
+title: "Lieux"
+author: Sarah Le Berre
+editor: visual
+format: 
+  html:
+    theme: minty
+    toc: true
+    toc-title: Sommaire
+    number-sections: false
+    echo: false
+  pdf:
+    echo: false
+knitr:
+  opts_chunk:
+    out.width: "100%"
+---
+
+## Hanvec
+
+::: callout-warning
+## Work in progress
+
+Oups... Je n'ai pas encore eu le temps de me pencher sur cette partie pour l'instant, ça viendra sûrement bientôt!
+
+N'hésitez pas à m'envoyer toutes vos anecdotes par mail: sarah.leberre\@yahoo.com
+:::
+
+## Irvillac
+
+::: callout-warning
+## Work in progress
+
+Oups... Je n'ai pas encore eu le temps de me pencher sur cette partie pour l'instant, ça viendra sûrement bientôt!
+
+N'hésitez pas à m'envoyer toutes vos anecdotes par mail: sarah.leberre\@yahoo.com
+:::

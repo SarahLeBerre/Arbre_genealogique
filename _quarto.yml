@@ -1,0 +1,13 @@
+project:
+  type: website
+  output-dir: docs
+  
+website:
+  title: "Genealogie"
+  navbar:
+    left:
+      - page_news.qmd
+      - page_individus.qmd
+      - page_lieux.qmd
+  
+  

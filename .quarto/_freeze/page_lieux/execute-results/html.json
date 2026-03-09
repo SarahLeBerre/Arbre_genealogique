@@ -1,0 +1,15 @@
+{
+  "hash": "919803f1a02f198ef60a2d5858ebdde9",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Lieux\"\nauthor: Sarah Le Berre\neditor: visual\nformat: \n  html:\n    theme: minty\n    toc: true\n    toc-title: Sommaire\n    number-sections: false\n    echo: false\n  pdf:\n    echo: false\nknitr:\n  opts_chunk:\n    out.width: \"100%\"\n---\n\n## Hanvec\n\n::: callout-warning\n## Work in progress\n\nOups... Je n'ai pas encore eu le temps de me pencher sur cette partie pour l'instant, ça viendra sûrement bientôt!\n\nN'hésitez pas à m'envoyer toutes vos anecdotes par mail: sarah.leberre\\@yahoo.com\n:::\n\n## Irvillac\n\n::: callout-important\nOups... Je n'ai pas encore eu le temps de me pencher sur cette partie pour l'instant, ça viendra sûrement bientôt!\n\nN'hésitez pas à m'envoyer toutes vos anecdotes par mail: sarah.leberre\\@yahoo.com\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

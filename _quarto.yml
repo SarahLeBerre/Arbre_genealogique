@@ -6,8 +6,24 @@ website:
   title: "Genealogie"
   navbar:
     left:
-      - page_news.qmd
-      - page_individus.qmd
-      - page_lieux.qmd
-  
-  
+      - text: "News"
+        href: page_news.qmd
+      - text: "Individus"
+        href: page_individus.qmd
+      - text: "Lieux"
+        href: page_lieux.qmd
+format:
+  html:
+    theme: minty
+    toc: true
+    toc-title: Sommaire
+    number-sections: false
+    echo: false
+    embed-resources: true
+    self-contained-math: true
+    
+pdf:
+    echo: false
+knitr:
+  opts_chunk:
+    out.width: "100%"

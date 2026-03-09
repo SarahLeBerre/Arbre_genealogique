@@ -1,22 +1,4 @@
----
-title: "Arbre Généalogique"
-author: Sarah Le Berre
-editor: visual
-format: 
-  html:
-    theme: minty
-    toc: true
-    toc-title: Sommaire
-    number-sections: false
-    echo: false
-    embed-resources: true
-    self-contained-math: true
-  pdf:
-    echo: false
-knitr:
-  opts_chunk:
-    out.width: "100%"
----
+# Arbre généalogique
 
 ```{r}
 #| warning: false

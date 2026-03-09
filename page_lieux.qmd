@@ -1,20 +1,4 @@
----
-title: "Lieux"
-author: Sarah Le Berre
-editor: visual
-format: 
-  html:
-    theme: minty
-    toc: true
-    toc-title: Sommaire
-    number-sections: false
-    echo: false
-  pdf:
-    echo: false
-knitr:
-  opts_chunk:
-    out.width: "100%"
----
+# Lieux
 
 ## Hanvec
 

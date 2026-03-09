@@ -1,15 +1,4 @@
----
-title: "News"
-author: "Sarah Le Berre"
-format: 
-  html:
-    theme: minty
-    number-sections: false
-    echo: false
-    embed-resources: true
-    self-contained-math: true
-editor: visual
----
+# News
 
 ## 08.03.26 - Mise en ligne du site 
 

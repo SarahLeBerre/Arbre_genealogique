@@ -7,7 +7,7 @@ website:
   navbar:
     left:
       - text: "News"
-        href: page_news.qmd
+        href: index.qmd
       - text: "Individus"
         href: page_individus.qmd
       - text: "Lieux"

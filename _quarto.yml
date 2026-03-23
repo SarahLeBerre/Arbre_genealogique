@@ -3,8 +3,9 @@ project:
   output-dir: docs
   
 website:
-  title: "Genealogie"
+  title: "Généalogie"
   navbar:
+    pinned: true
     left:
       - text: "News"
         href: index.qmd
@@ -12,6 +13,9 @@ website:
         href: page_individus.qmd
       - text: "Lieux"
         href: page_lieux.qmd
+     
+      
+        
 format:
   html:
     theme: minty
@@ -22,8 +26,7 @@ format:
     embed-resources: true
     self-contained-math: true
     
-pdf:
-    echo: false
+
 knitr:
   opts_chunk:
     out.width: "100%"

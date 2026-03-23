@@ -11,6 +11,10 @@
     "page_news.html": "f90132d0"
   },
   "index.qmd": {
-    "index.html": "c23c9a61"
+    "index.html": "c23c9a61",
+    "index.tex": "8d3862aa"
+  },
+  "page_lieux_wip.qmd": {
+    "page_lieux_wip.html": "f5922039"
   }
 }

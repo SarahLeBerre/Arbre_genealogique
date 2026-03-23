@@ -10,6 +10,8 @@ library(data.table)
 theme_set(theme_bw())
 
 dat <- fread("Genealogie.csv")
+dat <- dat |> 
+  filter(Sosa>0)
 ```
 
 ```{r}
